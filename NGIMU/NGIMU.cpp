@@ -7,7 +7,12 @@
 #include <signal.h>
 
 // for oscpack library
-#pragma comment(lib, "liboscpack_vc12x64D.lib")
+#ifdef _DEBUG
+#pragma comment(lib, "liboscpack_vc15x64D.lib")
+#else
+#pragma comment(lib, "liboscpack_vc15x64.lib")
+#endif
+
 #pragma comment(lib, "ws2_32.lib")
 #pragma comment(lib, "winmm.lib")
 
